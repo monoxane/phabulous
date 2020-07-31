@@ -54,7 +54,7 @@ func (f *FeedController) postReceive(c *gin.Context) {
 	storyText := c.Request.PostForm.Get("storyText")
 
 	if res.URI != "" {
-		storyText += " (<" + res.URI + "|More info>)"
+		storyText += " ( " + res.URI + " )"
 	}
 
 	phidType := constants.PhidType(res.Type)
